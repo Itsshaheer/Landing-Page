@@ -1,24 +1,333 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My First Webpage</title>
- <meta charset="utf-8"/>
-</head
-<style>
-.con{
-display:flex;
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&family=Titan+One&display=swap');
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: burlywood;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'Titan One', 'Times New Roman', Times, serif;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+a {
+  color: black;
+}
+
+p {
+  color: whitesmoke;
+}
+
+/*    Navbar    */
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  background-color:rgb(230, 250, 250);
+}
+
+.header-logo {
+  height: 36px;
+  margin-left: 24px;
+  border: 4px solid burlywood;
+  border-radius: 50%;
+  box-shadow: 1px 1px;
+}
+
+.header-logo:hover {
+  border: 4px solid rosybrown;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  margin-left: auto;
+  margin-right: 12px;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  padding: 16px;
+}
+
+.nav-links a:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }
 
 
-</style>
-<body>
-    <div class ="con">
-   <h1> My WEbsite </h1>
-<ul> <li><a> Link one </li></a>
-    li><a> Link one </li></a>
-    li><a> Link one </li></a>
-  </ul>
-</div>
 
-  </body>
+/*    Title secion    */
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      60deg,
+      rgba(57, 60, 90, 0.85),
+      rgba(180, 180, 120, 0.5)
+    ),
+    url(https://wallpaperforu.com/wp-content/uploads/2020/06/paste-wallpaper-2006171415338-scaled.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.media-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 128px 72px 72px;
+  gap: 24px;
+  padding: 32px;
+  border: 3px solid skyblue;
+  border-radius: 200px;
+  box-shadow: 2px 2px 20px 2px;
+  background: rgba(57, 60, 90, 0.7);
+}
+
+.textbox {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 32px;
+}
+
+.textbox h1 {
+  color: burlywood;
+  text-shadow: 2px 2px black;
+}
+
+.main-img {
+  object-fit: cover;
+  flex: 1 1 auto;
+  max-width: 300px;
+  border: 15px solid burlywood;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px;
+}
+
+.meow-button {
+  font-weight: 900;
+  padding: 4px 24px;
+  border-radius: 4px;
+  background-color: rgb(230, 250, 250);
+}
+
+.meow-button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  box-shadow: 1px 1px burlywood;
+}
+
+
+/*  Team information section  */
+.team-title {
+  color: white;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  padding: 96px 0 48px;
+}
+
+.worker-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 48px;
+  padding-bottom: 128px;
+}
+
+.worker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.worker-icon {
+  width: 200px;
+  height: 200px;
+  border: 12px solid rgb(230, 250, 250);
+  border-radius: 32px;
+  box-shadow: 2px 2px 3px black;
+  object-fit: cover;
+}
+
+.worker-text {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  flex-wrap: wrap;
+  max-width: 200px;
+}
+
+
+/*    Testimonial section     */
+.quote-section {
+  display: flex;
+  flex-direction: column;
+  padding: 128px 192px 96px;
+  background-color: lightblue;
+  font-size: 24px;
+  line-height: 150%;
+  font-style: italic;
+}
+
+.quote-section p {
+  text-align: end;
+  font-style: normal;
+  font-weight: 600;
+  color: sienna;
+}
+
+
+/*    Emain signup    */
+.signup-section {
+  display: flex;
+  align-items: center;
+  background-color: sienna;
+  border: 12px solid lightblue;
+  border-radius: 24px;
+  box-shadow: 2px 2px 3px black;
+  margin: 128px auto;
+  padding: 32px 48px;
+  max-width: 1100px;
+}
+
+.email-text h2 {
+  color: lightblue;
+  text-shadow: 1px 1px black;
+  font-family: 'Titan One', Arial, Helvetica, sans-serif;
+  padding-bottom: 8px;
+}
+
+.email-text p {
+  padding-right: 24px;
+}
+
+.email-btn {
+  flex-shrink: 0;
+  height: 36px;
+  width: 128px;
+  padding: 4px 24px;
+  margin: 24px auto;
+  background-color:rgb(230, 250, 250);
+  border-radius: 4px;
+  border: 3px solid lightblue;
+  box-shadow: 2px 2px 3px black;
+  font-weight: 400;
+}
+
+.email-btn:hover {
+  font-weight: 800;
+  background-color: skyblue;
+  border-color: steelblue;
+  cursor: pointer;
+}
+
+/*    Footer    */
+footer p {
+  padding: 24px;
+  text-align: center;
+  color: black;
+  background-color: rgb(230, 250, 250);
+}
+  </style> 
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#title"><img class="header-logo" src="https://i.imgur.com/SZzfni3.png"/></a>
+    <ul class="nav-links">
+      <li><a href="#team-info">Team</a></li>
+      <li><a href="#quote-section">Testimonials</a></li>
+      <li><a href="#signup-section">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="page-wrapper">
+    <div id="title" class="title-section">
+      <div class="media-box">
+        <div class="textbox">
+          <h1>Welcome!</h1>
+          <p>
+            This is where a short description would go. Or <em>should</em> go, or maybe even 
+            <strong>does</strong> go, depending on your perception of time-flow</em>.
+          </p>
+          <button class="meow-button">MEOW</button>
+        </div>
+        <img class="main-img" src="https://i.imgur.com/SZzfni3.png"/>
+      </div>
+    </div>
+    <div id="team-info" class="team-info">
+      <h1 class="team-title">Say hello to some of our team!</h1>
+      
+      <div class="worker-container">
+        <div class="worker">
+          <img class="worker-icon" src="https://media.istockphoto.com/photos/business-cat-holding-cup-of-coffee-picture-id1146568863?b=1&k=6&m=1146568863&s=170667a&w=0&h=4DeWiqNA4Yso9OTispYgvLw6rzPt2x8WwFXRolwXnac=" alt=""/>
+          <h2>Duncan</h2>
+          <div class="worker-text">Chief Operating Officer</div>
+        </div>
+        <div class="worker">
+          <img class="worker-icon" src="https://images.unsplash.com/photo-1615731410721-548b3616e4d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNhdCUyMHdpdGglMjB0aWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt=""/>
+          <h2>Sylvester</h2>
+          <div class="worker-text">Outside Sales</div>
+        </div>
+        <div class="worker">
+          <img class="worker-icon" src="https://media.istockphoto.com/photos/cat-surfing-on-internet-picture-id1172290687?k=20&m=1172290687&s=612x612&w=0&h=xINesZHX6C7C6PH5PfRx2cDn8d69o01osus3YjXq1QU=" alt=""/>
+          <h2>Reggie</h2>
+          <div class="worker-text">Chief Technical Officer</div>
+        </div>
+        <div class="worker">
+          <img class="worker-icon" src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGNhdCUyMHdpdGglMjB0aWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt=""/>
+          <h2>Jasmine</h2>
+          <div class="worker-text">Human Resources</div>
+        </div>
+      </div>
+
+    </div>
+    <div id="quote-section" class="quote-section">
+      <div class="quote">
+        This is the new and improved landing page for OtherCatt's portfolio! After completing 99% of the previous 
+        HTML/CSS curriculum, a short break to refresh was taken while working on the "Google search results" project. 
+        This is when the notification came that the entire curriculum was being replaced! And so, 
+        within inches of the finish line, we scrap everything and restart all of our projects.
+      </div>
+      <p>--OtherCatt</p>
+    </div>
+    <div id="signup-section" class="signup-section">
+
+      <div class="email-text">
+        <h2>Looking to earn some kibble?</h2>
+        <p>
+          It's all paws on deck, and we're always looking for new faces to join the team! 
+          Click to find out more about opportunities at OtherCatt Inc.!
+        </p>
+      </div>
+      <button class="email-btn">Email me!</button>
+    </div>
+    <footer>
+      <p>Copyright © <a target="_blank" href="https://www.theodinproject.com/">
+        The Odin Project</a><br>In conjunction with OtherCatt Inc.</p>
+    </footer>
+  </div>
+</body>
 </html>
+
